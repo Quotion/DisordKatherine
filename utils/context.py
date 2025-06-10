@@ -100,10 +100,10 @@ class Context(commands.Context):
 
             if guild.admin_role:
                 self.administrator_role: discord.Role = self.guild.get_role(int(guild.admin_role))
-                values['admin_role_id'] = self.admin_role.id
+                values['admin_role_id'] = self.administrator_role.id
             else:
                 self.administrator_role: discord.Role = self.guild.roles[-1]
-                values['admin_role_id'] = self.admin_role.id
+                values['admin_role_id'] = self.administrator_role.id
 
             if guild.operator_role:
                 self.op_role: discord.Role = self.guild.get_role(int(guild.operator_role))

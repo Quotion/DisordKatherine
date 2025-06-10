@@ -191,7 +191,7 @@ class Admin(AbstractCog, name="Админ-команды"):
     @app_commands.checks.cooldown(1, 30, key=lambda interaction: interaction.user.id)
     @app_commands.guild_only()
     @app_commands.check(AbstractCog.reconnect)
-    async def add_tech_channel(self, interaction: discord.Interaction, channel: discord.TextChannel):
+    async def add_rp_request_channel(self, interaction: discord.Interaction, channel: discord.TextChannel):
         bot: Katherine = interaction.client  # noqa
 
         await interaction.response.send_message("***Ожидайте...***")
